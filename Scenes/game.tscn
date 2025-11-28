@@ -1,0 +1,64 @@
+[gd_scene load_steps=4 format=3 uid="uid://bpwxmswapyl1n"]
+
+[ext_resource type="Texture2D" uid="uid://c8nopga08yl73" path="res://icon.svg" id="1_ebmjs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ebmjs"]
+paragraph_spacing = 5.0
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_qxrlw"]
+
+[node name="Game" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="CanvasLayer"]
+
+[node name="Main" type="HBoxContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Click_Container" type="VBoxContainer" parent="CanvasLayer/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/Main/Click_Container"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 50
+
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer/Main/Click_Container/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Main/Click_Container/MarginContainer/PanelContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Click_Label" type="Label" parent="CanvasLayer/Main/Click_Container/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Clicks: 0"
+label_settings = SubResource("LabelSettings_ebmjs")
+horizontal_alignment = 1
+
+[node name="CPS_Label" type="Label" parent="CanvasLayer/Main/Click_Container/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+text = "Clicks Per Second: 0"
+label_settings = SubResource("LabelSettings_qxrlw")
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Main/Click_Container"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer/Main/Click_Container/CenterContainer"]
+layout_mode = 2
+texture_normal = ExtResource("1_ebmjs")
+
+[node name="Shop_Container" type="VBoxContainer" parent="CanvasLayer/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
