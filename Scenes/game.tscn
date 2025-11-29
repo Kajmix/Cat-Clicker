@@ -61,7 +61,11 @@ size_flags_vertical = 3
 layout_mode = 2
 texture_normal = ExtResource("1_ebmjs")
 
-[node name="Shop_Container" type="VBoxContainer" parent="CanvasLayer/Main"]
+[node name="Shop_Container" type="ScrollContainer" parent="CanvasLayer/Main"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Shop_Container" type="VBoxContainer" parent="CanvasLayer/Main/Shop_Container"]
 layout_mode = 2
 size_flags_horizontal = 3
 
