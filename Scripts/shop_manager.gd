@@ -28,3 +28,6 @@ func _ready() -> void:
 		new_Item.icon = load(shop_items[item].icon)
 		new_Item.text = shop_items[item].name + "\n Price:" + str(shop_items[item].price) + "\n" + shop_items[item].description
 		V_Shop_Container.add_child(new_Item)
+
+func buy_item(id : String):
+	var item = shop_items[id]
