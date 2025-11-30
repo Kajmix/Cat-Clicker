@@ -1,6 +1,7 @@
 extends ScrollContainer
 @onready var V_Shop_Container : VBoxContainer = $V_Shop_Container
-var button_scene = load("res://Scenes/item.tscn");
+var button_scene = load("res://Scenes/item.tscn")
+var gameManager = load("res://Scripts/game_manager.gd")
 var shop_items={
 	"Helper_Cat" : {
 		"name" : "Helper Cat ^^",
@@ -31,3 +32,5 @@ func _ready() -> void:
 
 func buy_item(id : String):
 	var item = shop_items[id]
+	if gameManager.clicks < item.price:
+		print("You are poor")
