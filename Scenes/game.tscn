@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bpwxmswapyl1n"]
+[gd_scene load_steps=6 format=3 uid="uid://bpwxmswapyl1n"]
 
-[ext_resource type="Texture2D" uid="uid://c8nopga08yl73" path="res://icon.svg" id="1_ebmjs"]
-[ext_resource type="Script" uid="uid://bw36va1rnmlmx" path="res://Scenes/game_manager.gd" id="1_qxrlw"]
+[ext_resource type="Texture2D" uid="uid://c8nopga08yl73" path="res://Assets/icon.svg" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://bw36va1rnmlmx" path="res://Scripts/game_manager.gd" id="1_qxrlw"]
+[ext_resource type="Script" uid="uid://mwtbuv7ude00" path="res://Scripts/shop_manager.gd" id="3_wrm1d"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ebmjs"]
 paragraph_spacing = 5.0
@@ -64,10 +65,18 @@ texture_normal = ExtResource("1_ebmjs")
 [node name="Shop_Container" type="ScrollContainer" parent="CanvasLayer/Main"]
 layout_mode = 2
 size_flags_horizontal = 3
+script = ExtResource("3_wrm1d")
 
-[node name="Shop_Container" type="VBoxContainer" parent="CanvasLayer/Main/Shop_Container"]
+[node name="V_Shop_Container" type="VBoxContainer" parent="CanvasLayer/Main/Shop_Container"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="Label" type="Label" parent="CanvasLayer/Main/Shop_Container/V_Shop_Container"]
+layout_mode = 2
+text = "Shop:"
+horizontal_alignment = 1
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2

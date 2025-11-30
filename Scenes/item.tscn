@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dwbonm3323fjc"]
+
+[node name="Item" type="Button"]
+text = "{Name}
+Price: {price}
+{description}"
+alignment = 2
