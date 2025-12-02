@@ -7,28 +7,14 @@ var shop_items={
 		"name" : "Helper Cat ^^",
 		"price" : 15,
 		"power" : 0.1,
-		"description" : "Ready to work! Meow!",
+		"description" : "Adds 0.1 to the auto clicker value",
 		"icon" : "res://Assets/icon.svg"
 	},
 	"cursor2" : {
-		"name" : "Helper Cat ^^",
-		"price" : 30,
-		"power" : 0.5,
-		"description" : "Ready to work! Meow!",
-		"icon" : "res://Assets/icon.svg"
-	},
-	"cursor3" : {
-		"name" : "Helper Cat ^^",
-		"price" : 60,
-		"power" : 1,
-		"description" : "Ready to work! Meow!",
-		"icon" : "res://Assets/icon.svg"
-	},
-	"cursor4" : {
-		"name" : "Helper Cat ^^",
-		"price" : 1,
-		"power" : 100,
-		"description" : "Ready to work! Meow!",
+		"name" : "A Really Fast Cat",
+		"price" : 300,
+		"power" : 20,
+		"description" : "Adds 20 to the auto clicker value",
 		"icon" : "res://Assets/icon.svg"
 	}
 }
