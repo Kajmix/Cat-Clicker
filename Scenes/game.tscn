@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bpwxmswapyl1n"]
+[gd_scene load_steps=8 format=3 uid="uid://bpwxmswapyl1n"]
 
-[ext_resource type="Texture2D" uid="uid://c8nopga08yl73" path="res://Assets/icon.svg" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://bw36va1rnmlmx" path="res://Scripts/game_manager.gd" id="1_qxrlw"]
+[ext_resource type="Texture2D" uid="uid://c7cdbcbccg2w0" path="res://Assets/Meiw1.png" id="2_wowpa"]
+[ext_resource type="Texture2D" uid="uid://dakwn43yk7aoo" path="res://Assets/Meiw2.png" id="3_i6g32"]
 [ext_resource type="Script" uid="uid://mwtbuv7ude00" path="res://Scripts/shop_manager.gd" id="3_wrm1d"]
+[ext_resource type="Script" uid="uid://crfam4yegf1ro" path="res://Scripts/GameVariables.gd" id="4_3dryh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ebmjs"]
 paragraph_spacing = 5.0
@@ -59,8 +61,12 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="TextureButton" type="TextureButton" parent="CanvasLayer/Main/Main_Game/CenterContainer"]
+texture_filter = 1
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
-texture_normal = ExtResource("1_ebmjs")
+texture_normal = ExtResource("2_wowpa")
+texture_pressed = ExtResource("3_i6g32")
+stretch_mode = 0
 
 [node name="Shop_Container" type="ScrollContainer" parent="CanvasLayer/Main"]
 layout_mode = 2
@@ -81,6 +87,9 @@ horizontal_alignment = 1
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.2
 autostart = true
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("4_3dryh")
 
 [connection signal="button_down" from="CanvasLayer/Main/Main_Game/CenterContainer/TextureButton" to="." method="_clicked_button"]
 [connection signal="timeout" from="Timer" to="." method="game_tick_timeout"]

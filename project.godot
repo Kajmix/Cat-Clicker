@@ -14,3 +14,7 @@ config/name="Cat Clicker"
 run/main_scene="uid://bpwxmswapyl1n"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://Assets/icon.svg"
+
+[autoload]
+
+GameVariables="*res://Scripts/GameVariables.gd"

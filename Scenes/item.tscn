@@ -1,7 +1,10 @@
-[gd_scene format=3 uid="uid://dwbonm3323fjc"]
+[gd_scene load_steps=2 format=3 uid="uid://dwbonm3323fjc"]
+
+[ext_resource type="Script" uid="uid://c3v1avgj8njno" path="res://Scripts/item.gd" id="1_ys0gr"]
 
 [node name="Item" type="Button"]
 text = "{Name}
 Price: {price}
 {description}"
 alignment = 2
+script = ExtResource("1_ys0gr")
